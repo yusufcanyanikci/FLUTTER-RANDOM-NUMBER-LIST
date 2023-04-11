@@ -25,13 +25,13 @@ class ListRandomPage extends StatefulWidget {
   final String title;
 
   @override
-  State<ListRandomPage> createState() => _ListRandomPageState();
+  State<ListRandomPage> createState() => ListRandomPageState();
 }
 
-class _ListRandomPageState extends State<ListRandomPage> {
+class ListRandomPageState extends State<ListRandomPage> {
   List<int> randomList = [];
 
-  void _createRandomList() {
+  void createRandomList() {
     setState(() {
       randomList.clear();
       for (int i = 0; i < 10; i++) {
@@ -41,7 +41,7 @@ class _ListRandomPageState extends State<ListRandomPage> {
     });
   }
 
-  void _removeFromList(int index) {
+  void removeFromList(int index) {
     setState(() {
       randomList.removeAt(index);
     });
@@ -66,7 +66,7 @@ class _ListRandomPageState extends State<ListRandomPage> {
                     '${randomList[index]}',
                     textAlign: TextAlign.center,
                   ),
-                  onTap: () => _removeFromList(index),
+                  onTap: () => removeFromList(index),
                 );
               },
             ),
@@ -74,7 +74,7 @@ class _ListRandomPageState extends State<ListRandomPage> {
           Container(
             margin: const EdgeInsets.only(bottom: 15),
             child: ElevatedButton(
-              onPressed: _createRandomList,
+              onPressed: createRandomList,
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 94, 27, 31),
                 minimumSize: Size(50, 60),
