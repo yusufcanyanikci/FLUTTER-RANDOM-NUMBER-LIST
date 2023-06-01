@@ -1,4 +1,4 @@
-# Flutter-Random-Number-List
+# FLUTTER-RANDOM-NUMBER-LIST
 
 Flutter Dart dilinde Random Number List uygulaması kodları ile birlikte lib klasörünü indirebilirsiniz aşağıdaki linkten youtube videosunu izleyebilirsiniz.
 
